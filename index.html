@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especialmente para ti</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Swiper.js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffeef8;
+            color: #333;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        h1, h2 {
+            font-family: 'Great Vibes', cursive;
+            color: #d63384;
+        }
+
+        .swiper {
+            width: 90%;
+            max-width: 600px;
+            height: auto; /* Ajuste automático de altura */
+            margin: 20px auto;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+
+        .swiper-slide img,
+        .swiper-slide video {
+            width: 100%;
+            height: auto; /* Ajuste automático */
+            max-height: 400px; /* Límite para pantallas grandes */
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .btn-love {
+            background-color: #d63384;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn-love:hover {
+            transform: scale(1.1);
+            background-color: #b0226b;
+        }
+
+        /* 📱 Ajustes para dispositivos pequeños */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+                padding: 0 15px; /* Margen lateral */
+            }
+
+            .swiper {
+                width: 95%;
+                max-width: 100%;
+            }
+
+            .swiper-slide img,
+            .swiper-slide video {
+                max-height: 250px;
+            }
+
+            .btn-love {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="mt-4">¡Feliz Día de la Mujer!</h1>
+    <h2>Eres única y especial</h2>
+    <p class="mt-4">Sé que últimamente no he sido la mejor versión de mí mismo.<br> Perdóname por mis fallas y gracias por tu paciencia infinita.<br> Prometo esforzarme para ser la pareja que mereces, porque eres lo más importante para mí.</p>
+
+    <!-- Carrusel Swiper -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="foto1.jpg"></div>
+            <div class="swiper-slide">
+                <video autoplay muted loop>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide"><img src="foto2.jpg"></div>
+            <div class="swiper-slide">
+                <video autoplay muted loop>
+                    <source src="video2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide"><img src="foto3.jpg"></div>
+            <div class="swiper-slide"><img src="foto4.jpg"></div>
+            <div class="swiper-slide">
+                <video autoplay muted loop>
+                    <source src="video3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide"><img src="foto4.jpg"></div>
+            <div class="swiper-slide">
+                <video autoplay muted loop>
+                    <source src="video4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="swiper-slide"><img src="foto5.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Botón que abre la carta modal -->
+    <button class="btn-love mt-4" data-bs-toggle="modal" data-bs-target="#cartaModal">
+        Quiero hacerte feliz cada día ❤️
+    </button>
+
+    <!-- Modal con Carta de Amor -->
+    <div class="modal fade" id="cartaModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-3">Carta para el amor de mi vida</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Mi amor,<br><br>
+                        Hoy quiero aprovechar este día especial para decirte lo mucho que te amo y lo importante que eres en mi vida.<br><br>
+                        Sé que he cometido errores y quizás no he sido el hombre que mereces en algunos momentos, pero quiero que sepas que estoy decidido a cambiar, porque perderte sería perder lo más valioso que tengo.<br><br>
+                        Gracias por estar conmigo, por tu comprensión, tu cariño y sobre todo, por hacer de mi vida algo hermoso todos los días.<br><br>
+                        Te amo profundamente y prometo valorarte como mereces cada día más.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- Audio -->
+    <audio id="miCancion" loop>
+        <source src="solamente_tu.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Inicia el carrusel
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Reproduce música al cargar la página o al primer clic
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("miCancion");
+            audio.play().catch(() => {
+                const activarMusica = () => {
+                    audio.play();
+                    document.body.removeEventListener('click', activarMusica);
+                };
+                document.body.addEventListener('click', activarMusica, {once: true});
+            });
+        });
+    </script>
+
+    <!-- Audio -->
+    <audio id="miCancion" loop>
+        <source src="public/musica/solamente_tu.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+</html>
